@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YouTube Transcript & Prompt Processor</title>
+</head>
+<body>
+    <h1>YouTube Transcript & Prompt Processor</h1>
+    {% if error %}
+        <p style="color: red;">Error: {{ error }}</p>
+    {% endif %}
+    <form method="post">
+        <label for="youtube_link">YouTube Link: <span style="color: red;">*</span></label><br>
+        <input type="text" id="youtube_link" name="youtube_link" size="60" required><br><br>
+        
+        <label for="prompt">Prompt (optional, e.g., Summarize the video):</label><br>
+        <textarea id="prompt" name="prompt" rows="4" cols="60"></textarea><br><br>
+        
+        <label for="openai_api_key">OpenAI API Key:</label><br>
+        <input type="password" id="openai_api_key" name="openai_api_key" size="60" placeholder="Leave blank if set in environment"><br><br>
+        
+        <button type="submit">Submit</button>
+    </form>
+    
+    <hr>
+    <h2>Save Your OpenAI API Key Permanently</h2>
+    <p>If you want to set your OpenAI API key as an environment variable permanently, follow the instructions below for your operating system:</p>
+    <h3>Windows</h3>
+    <pre>setx OPENAI_API_KEY "your_openai_api_key"</pre>
+    <p>Note: You may need to restart your computer or log off and on again for the changes to take effect.</p>
+    <h3>Linux / macOS</h3>
+    <pre>echo 'export OPENAI_API_KEY="your_openai_api_key"' >> ~/.bashrc
+source ~/.bashrc</pre>
+    <p>If you use zsh, update your ~/.zshrc accordingly.</p>
+    
+    {% if result %}
+        <div id="resultContainer">
+            <h2>
+                Result: 
+                <button id="copyResultBtn" style="font-size: small;">Copy</button>
+            </h2>
+            <p id="resultText">{{ result }}</p>
+        </div>
+        <hr>
+    {% endif %}
+    {% if transcript %}
+        <div id="transcriptContainer">
+            <h3>
+                Transcript: 
+                <button id="copyTranscriptBtn" style="font-size: small;">Copy</button>
+            </h3>
+            <p id="transcriptText">{{ transcript }}</p>
+        </div>
+        <script>
+            // Copy the result text when "Copy" next to Result header is clicked.
+            document.getElementById("copyResultBtn").addEventListener("click", function() {
+                var content = document.getElementById("resultText").innerText;
+                navigator.clipboard.writeText(content).then(function(){
+                    alert("Result copied to clipboard!");
+                }).catch(function(err){
+                    alert("Failed to copy: " + err);
+                });
+            });
+            // Copy the transcript text when "Copy" next to Transcript header is clicked.
+            document.getElementById("copyTranscriptBtn").addEventListener("click", function() {
+                var content = document.getElementById("transcriptText").innerText;
+                navigator.clipboard.writeText(content).then(function(){
+                    alert("Transcript copied to clipboard!");
+                }).catch(function(err){
+                    alert("Failed to copy: " + err);
+                });
+            });
+        </script>
+    {% endif %}
+</body>
+</html> 

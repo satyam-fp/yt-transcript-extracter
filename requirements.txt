@@ -1,0 +1,8 @@
+fastapi
+uvicorn 
+jinja2 
+pytube 
+openai 
+youtube_transcript_api
+python-multipart
+pytubefix

@@ -16,22 +16,8 @@
         <label for="prompt">Prompt (optional, e.g., Summarize the video):</label><br>
         <textarea id="prompt" name="prompt" rows="4" cols="60"></textarea><br><br>
         
-        <label for="openai_api_key">OpenAI API Key:</label><br>
-        <input type="password" id="openai_api_key" name="openai_api_key" size="60" placeholder="Leave blank if set in environment"><br><br>
-        
         <button type="submit">Submit</button>
     </form>
-    
-    <hr>
-    <h2>Save Your OpenAI API Key Permanently</h2>
-    <p>If you want to set your OpenAI API key as an environment variable permanently, follow the instructions below for your operating system:</p>
-    <h3>Windows</h3>
-    <pre>setx OPENAI_API_KEY "your_openai_api_key"</pre>
-    <p>Note: You may need to restart your computer or log off and on again for the changes to take effect.</p>
-    <h3>Linux / macOS</h3>
-    <pre>echo 'export OPENAI_API_KEY="your_openai_api_key"' >> ~/.bashrc
-source ~/.bashrc</pre>
-    <p>If you use zsh, update your ~/.zshrc accordingly.</p>
     
     {% if result %}
         <div id="resultContainer">
@@ -47,6 +33,7 @@ source ~/.bashrc</pre>
         <div id="transcriptContainer">
             <h3>
                 Transcript: 
+
                 <button id="copyTranscriptBtn" style="font-size: small;">Copy</button>
             </h3>
             <p id="transcriptText">{{ transcript }}</p>

@@ -38,6 +38,7 @@
             </h3>
             <p id="transcriptText">{{ transcript }}</p>
         </div>
+    {% endif %}
         <script>
             // Copy the result text when "Copy" next to Result header is clicked.
             document.getElementById("copyResultBtn").addEventListener("click", function() {
@@ -58,6 +59,6 @@
                 });
             });
         </script>
-    {% endif %}
+    
 </body>
 </html> 

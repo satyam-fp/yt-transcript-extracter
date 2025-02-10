@@ -8,18 +8,22 @@ from openai import OpenAI
 import os
 import tempfile
 import re
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = FastAPI()
 
 templates = Jinja2Templates(directory="templates")
 
 # Fetch your OpenAI API key from the environment variable.
+
 # todo: add openai key to .env file
 # openai_key = os.getenv("OPENAI_API_KEY")
 # if not openai_key:
 #     raise Exception("Please set your OpenAI API key in the environment variable OPENAI_API_KEY.")
 
-openai_key = "sk-proj-XHFdrWlCOVl-"
+openai_key = os.getenv("OPENAI_API_KEY")
 openai = OpenAI(api_key=openai_key)
 
 
@@ -57,6 +61,8 @@ async def process_form(request: Request, youtube_link: str = Form(...), prompt: 
     
     # Try to get the transcript from YouTube
     try:
+        # manually break the try block and download the audio for better results
+        err = 1/0
         transcript_list = YouTubeTranscriptApi.get_transcript(video_id)
         transcript_text = ", ".join([item['text'] for item in transcript_list])
     except Exception as e:

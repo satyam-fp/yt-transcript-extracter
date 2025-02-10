@@ -6,3 +6,6 @@ openai
 youtube_transcript_api
 python-multipart
 pytubefix
+python-dotenv
+gspread
+google-auth

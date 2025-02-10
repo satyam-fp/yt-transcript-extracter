@@ -1,0 +1,1500 @@
+{
+    "nodes": {
+      "Material Output": {
+        "color": [
+          0.6079999804496765,
+          0.6079999804496765,
+          0.6079999804496765
+        ],
+        "height": 100,
+        "inputs": [
+          "None",
+          "None",
+          [
+            0,
+            0,
+            0
+          ],
+          0
+        ],
+        "is_active_output": true,
+        "location": [
+          1000,
+          0
+        ],
+        "mute": false,
+        "name": "Material Output",
+        "outputs": [],
+        "show_options": true,
+        "show_preview": false,
+        "show_texture": false,
+        "target": "ALL",
+        "use_custom_color": false,
+        "warning_propagation": "ALL",
+        "width": 140,
+        "type": "ShaderNodeOutputMaterial",
+        "label": ""
+      },
+      "Principled BSDF": {
+        "color": [
+          0.6079999804496765,
+          0.6079999804496765,
+          0.6079999804496765
+        ],
+        "distribution": "MULTI_GGX",
+        "height": 100,
+        "inputs": [
+          [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            1
+          ],
+          0,
+          0.5,
+          1.5,
+          1,
+          [
+            0,
+            0,
+            0
+          ],
+          0,
+          0,
+          0,
+          [
+            1,
+            0.20000000298023224,
+            0.10000000149011612
+          ],
+          0.05000000074505806,
+          1.399999976158142,
+          0,
+          0.5,
+          [
+            1,
+            1,
+            1,
+            1
+          ],
+          0,
+          0,
+          [
+            0,
+            0,
+            0
+          ],
+          0,
+          0,
+          0.029999999329447746,
+          1.5,
+          [
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          0,
+          0.5,
+          [
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1
+          ],
+          0,
+          0,
+          1.3300000429153442
+        ],
+        "location": [
+          700,
+          0
+        ],
+        "mute": false,
+        "name": "Principled BSDF",
+        "outputs": [
+          "None"
+        ],
+        "show_options": true,
+        "show_preview": false,
+        "show_texture": false,
+        "subsurface_method": "RANDOM_WALK",
+        "use_custom_color": false,
+        "warning_propagation": "ALL",
+        "width": 240,
+        "type": "ShaderNodeBsdfPrincipled",
+        "label": ""
+      },
+      "Texture Coordinate": {
+        "color": [
+          0.6079999804496765,
+          0.6079999804496765,
+          0.6079999804496765
+        ],
+        "from_instancer": false,
+        "height": 100,
+        "inputs": [],
+        "location": [
+          200,
+          100
+        ],
+        "mute": false,
+        "name": "Texture Coordinate",
+        "outputs": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "parent": "Bark_Texture",
+        "show_options": true,
+        "show_preview": false,
+        "show_texture": false,
+        "use_custom_color": false,
+        "warning_propagation": "ALL",
+        "width": 140,
+        "type": "ShaderNodeTexCoord",
+        "label": ""
+      },
+      "Noise Texture": {
+        "color": [
+          0.6079999804496765,
+          0.6079999804496765,
+          0.6079999804496765
+        ],
+        "color_mapping": {
+          "blend_color": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "blend_factor": 0,
+          "blend_type": "MIX",
+          "brightness": 1,
+          "color_ramp": {
+            "color_mode": "RGB",
+            "elements": [
+              {
+                "position": 0,
+                "color": [
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              },
+              {
+                "position": 1,
+                "color": [
+                  1,
+                  1,
+                  1,
+                  1
+                ]
+              }
+            ],
+            "hue_interpolation": "NEAR",
+            "interpolation": "LINEAR"
+          },
+          "contrast": 1,
+          "saturation": 1,
+          "use_color_ramp": false
+        },
+        "height": 100,
+        "inputs": [
+          [
+            0,
+            0,
+            0
+          ],
+          0,
+          8,
+          15,
+          0.5,
+          2,
+          0,
+          1,
+          0
+        ],
+        "location": [
+          400,
+          100
+        ],
+        "mute": false,
+        "name": "Noise Texture",
+        "noise_dimensions": "3D",
+        "noise_type": "FBM",
+        "normalize": true,
+        "outputs": [
+          0,
+          [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            1
+          ]
+        ],
+        "parent": "Bark_Texture",
+        "show_options": true,
+        "show_preview": false,
+        "show_texture": false,
+        "texture_mapping": {
+          "mapping": "FLAT",
+          "mapping_x": "X",
+          "mapping_y": "Y",
+          "mapping_z": "Z",
+          "max": [
+            1,
+            1,
+            1
+          ],
+          "min": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "translation": [
+            0,
+            0,
+            0
+          ],
+          "use_max": false,
+          "use_min": false,
+          "vector_type": "POINT"
+        },
+        "use_custom_color": false,
+        "warning_propagation": "ALL",
+        "width": 140,
+        "type": "ShaderNodeTexNoise",
+        "label": ""
+      },
+      "Mix (Legacy)": {
+        "blend_type": "LINEAR_LIGHT",
+        "color": [
+          0.6079999804496765,
+          0.6079999804496765,
+          0.6079999804496765
+        ],
+        "height": 100,
+        "inputs": [
+          0.07999999821186066,
+          [
+            0.5,
+            0.5,
+            0.5,
+            1
+          ],
+          [
+            0.5,
+            0.5,
+            0.5,
+            1
+          ]
+        ],
+        "location": [
+          600,
+          100
+        ],
+        "mute": false,
+        "name": "Mix (Legacy)",
+        "outputs": [
+          [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            1
+          ]
+        ],
+        "parent": "Bark_Texture",
+        "show_options": true,
+        "show_preview": false,
+        "show_texture": false,
+        "use_alpha": false,
+        "use_clamp": false,
+        "use_custom_color": false,
+        "warning_propagation": "ALL",
+        "width": 140,
+        "type": "ShaderNodeMixRGB",
+        "label": ""
+      },
+      "Mapping": {
+        "color": [
+          0.6079999804496765,
+          0.6079999804496765,
+          0.6079999804496765
+        ],
+        "height": 100,
+        "inputs": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0.20000000298023224
+          ]
+        ],
+        "location": [
+          800,
+          100
+        ],
+        "mute": false,
+        "name": "Mapping",
+        "outputs": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "parent": "Bark_Texture",
+        "show_options": true,
+        "show_preview": false,
+        "show_texture": false,
+        "use_custom_color": false,
+        "vector_type": "POINT",
+        "warning_propagation": "ALL",
+        "width": 140,
+        "type": "ShaderNodeMapping",
+        "label": ""
+      },
+      "Voronoi Texture": {
+        "color": [
+          0.6079999804496765,
+          0.6079999804496765,
+          0.6079999804496765
+        ],
+        "color_mapping": {
+          "blend_color": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "blend_factor": 0,
+          "blend_type": "MIX",
+          "brightness": 1,
+          "color_ramp": {
+            "color_mode": "RGB",
+            "elements": [
+              {
+                "position": 0,
+                "color": [
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              },
+              {
+                "position": 1,
+                "color": [
+                  1,
+                  1,
+                  1,
+                  1
+                ]
+              }
+            ],
+            "hue_interpolation": "NEAR",
+            "interpolation": "LINEAR"
+          },
+          "contrast": 1,
+          "saturation": 1,
+          "use_color_ramp": false
+        },
+        "distance": "EUCLIDEAN",
+        "feature": "DISTANCE_TO_EDGE",
+        "height": 100,
+        "inputs": [
+          [
+            0,
+            0,
+            0
+          ],
+          0,
+          8,
+          0,
+          0.5,
+          2,
+          1,
+          0.5,
+          1
+        ],
+        "location": [
+          1000,
+          100
+        ],
+        "mute": false,
+        "name": "Voronoi Texture",
+        "normalize": false,
+        "outputs": [
+          0,
+          [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            1
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          0,
+          0
+        ],
+        "parent": "Bark_Texture",
+        "show_options": true,
+        "show_preview": false,
+        "show_texture": false,
+        "texture_mapping": {
+          "mapping": "FLAT",
+          "mapping_x": "X",
+          "mapping_y": "Y",
+          "mapping_z": "Z",
+          "max": [
+            1,
+            1,
+            1
+          ],
+          "min": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "translation": [
+            0,
+            0,
+            0
+          ],
+          "use_max": false,
+          "use_min": false,
+          "vector_type": "POINT"
+        },
+        "use_custom_color": false,
+        "voronoi_dimensions": "3D",
+        "warning_propagation": "ALL",
+        "width": 140,
+        "type": "ShaderNodeTexVoronoi",
+        "label": ""
+      },
+      "Color Ramp": {
+        "color": [
+          0.6079999804496765,
+          0.6079999804496765,
+          0.6079999804496765
+        ],
+        "color_ramp": {
+          "color_mode": "RGB",
+          "elements": [
+            {
+              "position": 0,
+              "color": [
+                0.5899999737739563,
+                0.46000000834465027,
+                0.3499999940395355,
+                1
+              ]
+            },
+            {
+              "position": 1,
+              "color": [
+                0.05000000074505806,
+                0.03500000014901161,
+                0.019999999552965164,
+                1
+              ]
+            },
+            {
+              "position": 1,
+              "color": [
+                1,
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "hue_interpolation": "NEAR",
+          "interpolation": "LINEAR"
+        },
+        "height": 100,
+        "inputs": [
+          0.5
+        ],
+        "location": [
+          1200,
+          100
+        ],
+        "mute": false,
+        "name": "Color Ramp",
+        "outputs": [
+          [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            1
+          ],
+          0
+        ],
+        "parent": "Bark_Texture",
+        "show_options": true,
+        "show_preview": false,
+        "show_texture": false,
+        "use_custom_color": false,
+        "warning_propagation": "ALL",
+        "width": 240,
+        "type": "ShaderNodeValToRGB",
+        "label": ""
+      },
+      "Color Ramp.001": {
+        "color": [
+          0.6079999804496765,
+          0.6079999804496765,
+          0.6079999804496765
+        ],
+        "color_ramp": {
+          "color_mode": "RGB",
+          "elements": [
+            {
+              "position": 0,
+              "color": [
+                0.699999988079071,
+                0.699999988079071,
+                0.699999988079071,
+                1
+              ]
+            },
+            {
+              "position": 1,
+              "color": [
+                0.9300000071525574,
+                0.9300000071525574,
+                0.9300000071525574,
+                1
+              ]
+            }
+          ],
+          "hue_interpolation": "NEAR",
+          "interpolation": "LINEAR"
+        },
+        "height": 100,
+        "inputs": [
+          0.5
+        ],
+        "location": [
+          0,
+          0
+        ],
+        "mute": false,
+        "name": "Color Ramp.001",
+        "outputs": [
+          [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            1
+          ],
+          0
+        ],
+        "show_options": true,
+        "show_preview": false,
+        "show_texture": false,
+        "use_custom_color": false,
+        "warning_propagation": "ALL",
+        "width": 240,
+        "type": "ShaderNodeValToRGB",
+        "label": ""
+      },
+      "Noise Texture.001": {
+        "color": [
+          0.6079999804496765,
+          0.6079999804496765,
+          0.6079999804496765
+        ],
+        "color_mapping": {
+          "blend_color": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "blend_factor": 0,
+          "blend_type": "MIX",
+          "brightness": 1,
+          "color_ramp": {
+            "color_mode": "RGB",
+            "elements": [
+              {
+                "position": 0,
+                "color": [
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              },
+              {
+                "position": 1,
+                "color": [
+                  1,
+                  1,
+                  1,
+                  1
+                ]
+              }
+            ],
+            "hue_interpolation": "NEAR",
+            "interpolation": "LINEAR"
+          },
+          "contrast": 1,
+          "saturation": 1,
+          "use_color_ramp": false
+        },
+        "height": 100,
+        "inputs": [
+          [
+            0,
+            0,
+            0
+          ],
+          0,
+          7,
+          15,
+          0.6499999761581421,
+          2,
+          0,
+          1,
+          0.30000001192092896
+        ],
+        "location": [
+          200,
+          100
+        ],
+        "mute": false,
+        "name": "Noise Texture.001",
+        "noise_dimensions": "3D",
+        "noise_type": "FBM",
+        "normalize": true,
+        "outputs": [
+          0,
+          [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            1
+          ]
+        ],
+        "parent": "Moss",
+        "show_options": true,
+        "show_preview": false,
+        "show_texture": false,
+        "texture_mapping": {
+          "mapping": "FLAT",
+          "mapping_x": "X",
+          "mapping_y": "Y",
+          "mapping_z": "Z",
+          "max": [
+            1,
+            1,
+            1
+          ],
+          "min": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "translation": [
+            0,
+            0,
+            0
+          ],
+          "use_max": false,
+          "use_min": false,
+          "vector_type": "POINT"
+        },
+        "use_custom_color": false,
+        "warning_propagation": "ALL",
+        "width": 140,
+        "type": "ShaderNodeTexNoise",
+        "label": ""
+      },
+      "Color Ramp.002": {
+        "color": [
+          0.6079999804496765,
+          0.6079999804496765,
+          0.6079999804496765
+        ],
+        "color_ramp": {
+          "color_mode": "RGB",
+          "elements": [
+            {
+              "position": 0.44999998807907104,
+              "color": [
+                0,
+                0,
+                0,
+                1
+              ]
+            },
+            {
+              "position": 0.550000011920929,
+              "color": [
+                1,
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "hue_interpolation": "NEAR",
+          "interpolation": "LINEAR"
+        },
+        "height": 100,
+        "inputs": [
+          0.5
+        ],
+        "location": [
+          400,
+          100
+        ],
+        "mute": false,
+        "name": "Color Ramp.002",
+        "outputs": [
+          [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            1
+          ],
+          0
+        ],
+        "parent": "Moss",
+        "show_options": true,
+        "show_preview": false,
+        "show_texture": false,
+        "use_custom_color": false,
+        "warning_propagation": "ALL",
+        "width": 240,
+        "type": "ShaderNodeValToRGB",
+        "label": ""
+      },
+      "Mix (Legacy).001": {
+        "blend_type": "MIX",
+        "color": [
+          0.6079999804496765,
+          0.6079999804496765,
+          0.6079999804496765
+        ],
+        "height": 100,
+        "inputs": [
+          0.5,
+          [
+            0.5,
+            0.5,
+            0.5,
+            1
+          ],
+          [
+            0.25999999046325684,
+            0.41999998688697815,
+            0.1599999964237213,
+            1
+          ]
+        ],
+        "location": [
+          200,
+          150
+        ],
+        "mute": false,
+        "name": "Mix (Legacy).001",
+        "outputs": [
+          [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            1
+          ]
+        ],
+        "show_options": true,
+        "show_preview": false,
+        "show_texture": false,
+        "use_alpha": false,
+        "use_clamp": false,
+        "use_custom_color": false,
+        "warning_propagation": "ALL",
+        "width": 140,
+        "type": "ShaderNodeMixRGB",
+        "label": ""
+      },
+      "Bump": {
+        "color": [
+          0.6079999804496765,
+          0.6079999804496765,
+          0.6079999804496765
+        ],
+        "height": 100,
+        "inputs": [
+          0.3499999940395355,
+          1,
+          1,
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "invert": false,
+        "location": [
+          50,
+          150
+        ],
+        "mute": false,
+        "name": "Bump",
+        "outputs": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "parent": "Bump_Layers",
+        "show_options": true,
+        "show_preview": false,
+        "show_texture": false,
+        "use_custom_color": false,
+        "warning_propagation": "ALL",
+        "width": 140,
+        "type": "ShaderNodeBump",
+        "label": "Bark Bump"
+      },
+      "Noise Texture.002": {
+        "color": [
+          0.6079999804496765,
+          0.6079999804496765,
+          0.6079999804496765
+        ],
+        "color_mapping": {
+          "blend_color": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929
+          ],
+          "blend_factor": 0,
+          "blend_type": "MIX",
+          "brightness": 1,
+          "color_ramp": {
+            "color_mode": "RGB",
+            "elements": [
+              {
+                "position": 0,
+                "color": [
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              },
+              {
+                "position": 1,
+                "color": [
+                  1,
+                  1,
+                  1,
+                  1
+                ]
+              }
+            ],
+            "hue_interpolation": "NEAR",
+            "interpolation": "LINEAR"
+          },
+          "contrast": 1,
+          "saturation": 1,
+          "use_color_ramp": false
+        },
+        "height": 100,
+        "inputs": [
+          [
+            0,
+            0,
+            0
+          ],
+          0,
+          4,
+          15,
+          0.6000000238418579,
+          2,
+          0,
+          1,
+          0
+        ],
+        "location": [
+          -150,
+          -150
+        ],
+        "mute": false,
+        "name": "Noise Texture.002",
+        "noise_dimensions": "3D",
+        "noise_type": "FBM",
+        "normalize": true,
+        "outputs": [
+          0,
+          [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            1
+          ]
+        ],
+        "parent": "Bump_Layers",
+        "show_options": true,
+        "show_preview": false,
+        "show_texture": false,
+        "texture_mapping": {
+          "mapping": "FLAT",
+          "mapping_x": "X",
+          "mapping_y": "Y",
+          "mapping_z": "Z",
+          "max": [
+            1,
+            1,
+            1
+          ],
+          "min": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "translation": [
+            0,
+            0,
+            0
+          ],
+          "use_max": false,
+          "use_min": false,
+          "vector_type": "POINT"
+        },
+        "use_custom_color": false,
+        "warning_propagation": "ALL",
+        "width": 140,
+        "type": "ShaderNodeTexNoise",
+        "label": ""
+      },
+      "Bump.001": {
+        "color": [
+          0.6079999804496765,
+          0.6079999804496765,
+          0.6079999804496765
+        ],
+        "height": 100,
+        "inputs": [
+          0.4000000059604645,
+          1,
+          1,
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "invert": false,
+        "location": [
+          250,
+          150
+        ],
+        "mute": false,
+        "name": "Bump.001",
+        "outputs": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "parent": "Bump_Layers",
+        "show_options": true,
+        "show_preview": false,
+        "show_texture": false,
+        "use_custom_color": false,
+        "warning_propagation": "ALL",
+        "width": 140,
+        "type": "ShaderNodeBump",
+        "label": "Noise Bump"
+      },
+      "Bump.002": {
+        "color": [
+          0.6079999804496765,
+          0.6079999804496765,
+          0.6079999804496765
+        ],
+        "height": 100,
+        "inputs": [
+          1,
+          1,
+          1,
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "invert": false,
+        "location": [
+          450,
+          150
+        ],
+        "mute": false,
+        "name": "Bump.002",
+        "outputs": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "parent": "Bump_Layers",
+        "show_options": true,
+        "show_preview": false,
+        "show_texture": false,
+        "use_custom_color": false,
+        "warning_propagation": "ALL",
+        "width": 140,
+        "type": "ShaderNodeBump",
+        "label": "Moss Bump"
+      },
+      "Displacement": {
+        "color": [
+          0.6079999804496765,
+          0.6079999804496765,
+          0.6079999804496765
+        ],
+        "height": 100,
+        "inputs": [
+          0,
+          0.5,
+          0.14000000059604645,
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "location": [
+          800,
+          -300
+        ],
+        "mute": false,
+        "name": "Displacement",
+        "outputs": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "show_options": true,
+        "show_preview": false,
+        "show_texture": false,
+        "space": "OBJECT",
+        "use_custom_color": false,
+        "warning_propagation": "ALL",
+        "width": 140,
+        "type": "ShaderNodeDisplacement",
+        "label": ""
+      },
+      "Bark_Texture": {
+        "color": [
+          0.6079999804496765,
+          0.6079999804496765,
+          0.6079999804496765
+        ],
+        "height": 421,
+        "inputs": [],
+        "label_size": 20,
+        "location": [
+          -1200,
+          200
+        ],
+        "mute": false,
+        "name": "Bark_Texture",
+        "outputs": [],
+        "show_options": true,
+        "show_preview": false,
+        "show_texture": false,
+        "shrink": true,
+        "use_custom_color": false,
+        "warning_propagation": "ALL",
+        "width": 1300,
+        "type": "NodeFrame",
+        "label": "Bark Texture"
+      },
+      "Moss": {
+        "color": [
+          0.6079999804496765,
+          0.6079999804496765,
+          0.6079999804496765
+        ],
+        "height": 351,
+        "inputs": [],
+        "label_size": 20,
+        "location": [
+          -400,
+          -300
+        ],
+        "mute": false,
+        "name": "Moss",
+        "outputs": [],
+        "show_options": true,
+        "show_preview": false,
+        "show_texture": false,
+        "shrink": true,
+        "use_custom_color": false,
+        "warning_propagation": "ALL",
+        "width": 500,
+        "type": "NodeFrame",
+        "label": "Moss"
+      },
+      "Bump_Layers": {
+        "color": [
+          0.6079999804496765,
+          0.6079999804496765,
+          0.6079999804496765
+        ],
+        "height": 651,
+        "inputs": [],
+        "label_size": 20,
+        "location": [
+          150,
+          -250
+        ],
+        "mute": false,
+        "name": "Bump_Layers",
+        "outputs": [],
+        "show_options": true,
+        "show_preview": false,
+        "show_texture": false,
+        "shrink": true,
+        "use_custom_color": false,
+        "warning_propagation": "ALL",
+        "width": 800,
+        "type": "NodeFrame",
+        "label": "Bump Layers"
+      }
+    },
+    "links": [
+      {
+        "from_node": "Principled BSDF",
+        "to_node": "Material Output",
+        "from_socket": "BSDF",
+        "from_socket_type": "NodeSocketShader",
+        "from_socket_identifier": "BSDF",
+        "to_socket": "Surface",
+        "to_socket_type": "NodeSocketShader",
+        "to_socket_identifier": "Surface"
+      },
+      {
+        "from_node": "Texture Coordinate",
+        "to_node": "Mix (Legacy)",
+        "from_socket": "Object",
+        "from_socket_type": "NodeSocketVector",
+        "from_socket_identifier": "Object",
+        "to_socket": "Color1",
+        "to_socket_type": "NodeSocketColor",
+        "to_socket_identifier": "Color1"
+      },
+      {
+        "from_node": "Noise Texture",
+        "to_node": "Mix (Legacy)",
+        "from_socket": "Color",
+        "from_socket_type": "NodeSocketColor",
+        "from_socket_identifier": "Color",
+        "to_socket": "Color2",
+        "to_socket_type": "NodeSocketColor",
+        "to_socket_identifier": "Color2"
+      },
+      {
+        "from_node": "Mix (Legacy)",
+        "to_node": "Mapping",
+        "from_socket": "Color",
+        "from_socket_type": "NodeSocketColor",
+        "from_socket_identifier": "Color",
+        "to_socket": "Vector",
+        "to_socket_type": "NodeSocketVector",
+        "to_socket_identifier": "Vector"
+      },
+      {
+        "from_node": "Mapping",
+        "to_node": "Voronoi Texture",
+        "from_socket": "Vector",
+        "from_socket_type": "NodeSocketVector",
+        "from_socket_identifier": "Vector",
+        "to_socket": "Vector",
+        "to_socket_type": "NodeSocketVector",
+        "to_socket_identifier": "Vector"
+      },
+      {
+        "from_node": "Voronoi Texture",
+        "to_node": "Color Ramp",
+        "from_socket": "Distance",
+        "from_socket_type": "NodeSocketFloat",
+        "from_socket_identifier": "Distance",
+        "to_socket": "Fac",
+        "to_socket_type": "NodeSocketFloatFactor",
+        "to_socket_identifier": "Fac"
+      },
+      {
+        "from_node": "Voronoi Texture",
+        "to_node": "Color Ramp.001",
+        "from_socket": "Distance",
+        "from_socket_type": "NodeSocketFloat",
+        "from_socket_identifier": "Distance",
+        "to_socket": "Fac",
+        "to_socket_type": "NodeSocketFloatFactor",
+        "to_socket_identifier": "Fac"
+      },
+      {
+        "from_node": "Texture Coordinate",
+        "to_node": "Noise Texture.001",
+        "from_socket": "Object",
+        "from_socket_type": "NodeSocketVector",
+        "from_socket_identifier": "Object",
+        "to_socket": "Vector",
+        "to_socket_type": "NodeSocketVector",
+        "to_socket_identifier": "Vector"
+      },
+      {
+        "from_node": "Noise Texture.001",
+        "to_node": "Color Ramp.002",
+        "from_socket": "Fac",
+        "from_socket_type": "NodeSocketFloat",
+        "from_socket_identifier": "Fac",
+        "to_socket": "Fac",
+        "to_socket_type": "NodeSocketFloatFactor",
+        "to_socket_identifier": "Fac"
+      },
+      {
+        "from_node": "Color Ramp.002",
+        "to_node": "Mix (Legacy).001",
+        "from_socket": "Color",
+        "from_socket_type": "NodeSocketColor",
+        "from_socket_identifier": "Color",
+        "to_socket": "Fac",
+        "to_socket_type": "NodeSocketFloatFactor",
+        "to_socket_identifier": "Fac"
+      },
+      {
+        "from_node": "Color Ramp",
+        "to_node": "Mix (Legacy).001",
+        "from_socket": "Color",
+        "from_socket_type": "NodeSocketColor",
+        "from_socket_identifier": "Color",
+        "to_socket": "Color1",
+        "to_socket_type": "NodeSocketColor",
+        "to_socket_identifier": "Color1"
+      },
+      {
+        "from_node": "Mix (Legacy).001",
+        "to_node": "Principled BSDF",
+        "from_socket": "Color",
+        "from_socket_type": "NodeSocketColor",
+        "from_socket_identifier": "Color",
+        "to_socket": "Base Color",
+        "to_socket_type": "NodeSocketColor",
+        "to_socket_identifier": "Base Color"
+      },
+      {
+        "from_node": "Color Ramp.001",
+        "to_node": "Principled BSDF",
+        "from_socket": "Color",
+        "from_socket_type": "NodeSocketColor",
+        "from_socket_identifier": "Color",
+        "to_socket": "Roughness",
+        "to_socket_type": "NodeSocketFloatFactor",
+        "to_socket_identifier": "Roughness"
+      },
+      {
+        "from_node": "Voronoi Texture",
+        "to_node": "Bump",
+        "from_socket": "Distance",
+        "from_socket_type": "NodeSocketFloat",
+        "from_socket_identifier": "Distance",
+        "to_socket": "Height",
+        "to_socket_type": "NodeSocketFloat",
+        "to_socket_identifier": "Height"
+      },
+      {
+        "from_node": "Texture Coordinate",
+        "to_node": "Noise Texture.002",
+        "from_socket": "Object",
+        "from_socket_type": "NodeSocketVector",
+        "from_socket_identifier": "Object",
+        "to_socket": "Vector",
+        "to_socket_type": "NodeSocketVector",
+        "to_socket_identifier": "Vector"
+      },
+      {
+        "from_node": "Noise Texture.002",
+        "to_node": "Bump.001",
+        "from_socket": "Fac",
+        "from_socket_type": "NodeSocketFloat",
+        "from_socket_identifier": "Fac",
+        "to_socket": "Height",
+        "to_socket_type": "NodeSocketFloat",
+        "to_socket_identifier": "Height"
+      },
+      {
+        "from_node": "Bump",
+        "to_node": "Bump.001",
+        "from_socket": "Normal",
+        "from_socket_type": "NodeSocketVector",
+        "from_socket_identifier": "Normal",
+        "to_socket": "Normal",
+        "to_socket_type": "NodeSocketVector",
+        "to_socket_identifier": "Normal"
+      },
+      {
+        "from_node": "Color Ramp.002",
+        "to_node": "Bump.002",
+        "from_socket": "Color",
+        "from_socket_type": "NodeSocketColor",
+        "from_socket_identifier": "Color",
+        "to_socket": "Height",
+        "to_socket_type": "NodeSocketFloat",
+        "to_socket_identifier": "Height"
+      },
+      {
+        "from_node": "Bump.001",
+        "to_node": "Bump.002",
+        "from_socket": "Normal",
+        "from_socket_type": "NodeSocketVector",
+        "from_socket_identifier": "Normal",
+        "to_socket": "Normal",
+        "to_socket_type": "NodeSocketVector",
+        "to_socket_identifier": "Normal"
+      },
+      {
+        "from_node": "Bump.002",
+        "to_node": "Principled BSDF",
+        "from_socket": "Normal",
+        "from_socket_type": "NodeSocketVector",
+        "from_socket_identifier": "Normal",
+        "to_socket": "Normal",
+        "to_socket_type": "NodeSocketVector",
+        "to_socket_identifier": "Normal"
+      },
+      {
+        "from_node": "Voronoi Texture",
+        "to_node": "Displacement",
+        "from_socket": "Distance",
+        "from_socket_type": "NodeSocketFloat",
+        "from_socket_identifier": "Distance",
+        "to_socket": "Height",
+        "to_socket_type": "NodeSocketFloat",
+        "to_socket_identifier": "Height"
+      },
+      {
+        "from_node": "Displacement",
+        "to_node": "Material Output",
+        "from_socket": "Displacement",
+        "from_socket_type": "NodeSocketVector",
+        "from_socket_identifier": "Displacement",
+        "to_socket": "Displacement",
+        "to_socket_type": "NodeSocketVector",
+        "to_socket_identifier": "Displacement"
+      }
+    ],
+    "name": "Shader Nodetree"
+  }
